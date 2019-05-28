@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C798ACA-71C6-44EC-BCB4-18AD20056CF6}</ProjectGuid>
+    <ProjectGuid>{6316C8DC-0EFA-4858-85CF-3302C789BC17}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MyWinApp</RootNamespace>
-    <AssemblyName>MyWinApp</AssemblyName>
+    <RootNamespace>CoffeeShopWinApp</RootNamespace>
+    <AssemblyName>CoffeeShopWinApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataTypeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataTypeForm.Designer.cs">
-      <DependentUpon>DataTypeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DataTypeForm.resx">
-      <DependentUpon>DataTypeForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
