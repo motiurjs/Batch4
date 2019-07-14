@@ -10,10 +10,8 @@ using System.Windows.Forms;
 
 namespace BookShopListApp
 {
-    public partial class BookShopForm : Form
+    public partial class DemoForm : Form
     {
-        
-        
         List<string> name = new List<string>();
         List<string> contact = new List<string>();
         List<string> address = new List<string>();
@@ -21,8 +19,7 @@ namespace BookShopListApp
         List<int> quantity = new List<int>();
         List<int> totalPrice = new List<int>();
 
-
-        public BookShopForm()
+        public DemoForm()
         {
             InitializeComponent();
         }
@@ -31,14 +28,14 @@ namespace BookShopListApp
         {
             name.Add(nameTextBox.Text);
             contact.Add(contactTextBox.Text);
-            address.Add(AddressTextBox.Text);
+            address.Add(addressTextBox.Text);
             order.Add(orderComboBox.Text);
             quantity.Add(Convert.ToInt32(quantityTextBox.Text));
 
 
             int price = 0;
 
-            if(order[order.Count-1].Equals("Math"))
+            if (order[order.Count - 1].Equals("Math"))
             {
                 price = 120;
             }
@@ -57,23 +54,22 @@ namespace BookShopListApp
             {
                 price = 80;
             }
-            totalPrice.Add(price*quantity[quantity.Count-1]);
+            totalPrice.Add(price * quantity[quantity.Count - 1]);
 
             string message = "";
-            for(int index=0;index<name.Count;index++)
+            for (int index = 0; index < name.Count; index++)
             {
-                message += "Customer No: " + (index + 1)+"\n";
-                message += "Customer Name: " + name[index]+"\n";
-                message += "Contact No. : " + contact[index]+"\n";
-                message += "Address: " + address[index]+"\n";
-                message += "Order: " + order[index]+"\n";
-                message += "No of Quantity : " + Convert.ToString(quantity[index])+"\n";
-                message += "Total Price is : " + Convert.ToString(totalPrice[index])+"\n\n";
+                message += "Customer No: " + (index + 1) + "\n";
+                message += "Customer Name: " + name[index] + "\n";
+                message += "Contact No. : " + contact[index] + "\n";
+                message += "Address: " + address[index] + "\n";
+                message += "Order: " + order[index] + "\n";
+                message += "No of Quantity : " + Convert.ToString(quantity[index]) + "\n";
+                message += "Total Price is : " + Convert.ToString(totalPrice[index]) + "\n\n";
 
             }
             showRichTextBox.Text = message;
 
-            
         }
     }
 }

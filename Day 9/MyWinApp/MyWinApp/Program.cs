@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookShopListApp
+namespace MyWinApp
 {
     static class Program
     {
@@ -16,8 +16,7 @@ namespace BookShopListApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new BookShopForm());
-            Application.Run(new DemoForm());
+            Application.Run(new DepartmentUi());
         }
     }
 }
